@@ -3,8 +3,10 @@
 
 $twitter-color: #55ACEE;
 $panel-color: #222;
-$color-negative: #FF0000;
-$color-positive: #DDDD00;
+$color-super-negative: #FF0000;
+$color-negative: #FFA500;
+$color-positive: #FFFF00;
+$color-super-positive: #00FF00;
 $color-neutral: #444;
 $color-text: #CCC;
 $panel-border: 5px solid #333;
@@ -216,10 +218,18 @@ a {
 		font-size: 12px;
 	}
 
+	&.super-negative {
+		border-color: $color-super-negative;
+	}
+	
 	&.negative {
 		border-color: $color-negative;
 	}
 
+	&.super-positive {
+		border-color: $color-super-positive;
+	}
+	
 	&.positive {
 		border-color: $color-positive;
 	}
