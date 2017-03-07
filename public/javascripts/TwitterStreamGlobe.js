@@ -163,7 +163,7 @@
 	 */ 
 	function render () {
 
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;  // chahge earth speed
+		earthMesh.rotation.y = earthMesh.rotation.y - 0.02;  // chahge earth speed
 		
 	  renderer.autoClear = false;
 	  renderer.clear();
