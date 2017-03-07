@@ -53,12 +53,12 @@
 	 */
 	function addEarth () {
 
-	  var sphereGeometry = new THREE.SphereGeometry(600, 50, 50);
+	  var sphereGeometry = new THREE.SphereGeometry(650, 50, 50);   // change earth size
 
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world.jpg');
+	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world.jpg');   // change earth image
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
@@ -104,7 +104,7 @@
 
 	  var phi = PI_HALF - lat * Math.PI / 180 - Math.PI * 0.01;
 	  var theta = 2 * Math.PI - lon * Math.PI / 180 + Math.PI * 0.06;
-	  var rad = 600 + height;
+	  var rad = 650 + height;  // change this if there is a change at earth size
 
 	  vector3.x = Math.sin(phi) * Math.cos(theta) * rad;
 	  vector3.y = Math.cos(phi) * rad;
@@ -163,7 +163,7 @@
 	 */ 
 	function render () {
 
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.005;
+		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;  // chahge earth speed
 		
 	  renderer.autoClear = false;
 	  renderer.clear();
@@ -192,3 +192,4 @@
 	return TwtrGlobe;
 
 })().init();
+
