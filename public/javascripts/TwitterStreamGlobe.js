@@ -53,7 +53,7 @@
 	 */
 	function addEarth () {
 
-	  var sphereGeometry = new THREE.SphereGeometry(600, 50, 50);   // change earth size
+	  var sphereGeometry = new THREE.SphereGeometry(650, 50, 50);   // change earth size
 
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
@@ -106,7 +106,7 @@
 	
 	  var phi = PI_HALF - lat * Math.PI / 180 - Math.PI * 0.01;
 	  var theta = 2 * Math.PI - lon * Math.PI / 180 + Math.PI * 0.06;
-	  var rad = 600 + height;  					// change this number if change earth size
+	  var rad = 650 + height;  					// change this number if change earth size
 
 	  vector3.x = Math.sin(phi) * Math.cos(theta) * rad;
 	  vector3.y = Math.cos(phi) * rad;
