@@ -98,19 +98,22 @@
 		height = height ? height : 0;
 
 	  var vector3 = new THREE.Vector3(0, 0, 0);
-
-	  lon = lon + 10;
+	
+	  if (lat >= 26 && lat <= 49 && lon >= -124 && lon <= -70) {    // change coordinates to chenge tweet origin
+	  lon = lon + 10;						// if the whole globe then delete if
 	  lat = lat - 2;
-
+	   
+	
 	  var phi = PI_HALF - lat * Math.PI / 180 - Math.PI * 0.01;
 	  var theta = 2 * Math.PI - lon * Math.PI / 180 + Math.PI * 0.06;
-	  var rad = 600 + height;
+	  var rad = 600 + height;  					// change this number if change earth size
 
 	  vector3.x = Math.sin(phi) * Math.cos(theta) * rad;
 	  vector3.y = Math.cos(phi) * rad;
 	  vector3.z = Math.sin(phi) * Math.sin(theta) * rad;
 
 	  return vector3;
+	}
 	};
 
 	/**
