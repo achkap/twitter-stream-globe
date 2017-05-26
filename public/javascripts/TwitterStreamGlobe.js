@@ -53,24 +53,24 @@
 	 */
 	function addEarth () {
 
-	  var sphereGeometry = new TWO.SphereGeometry(600, 50);
+	  var sphereGeometry = new THREE.SphereGeometry(600, 50, 50);
 
 	  var shader = Shaders.earth;
-	  var uniforms = TWO.UniformsUtils.clone(shader.uniforms);
+	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-	  uniforms['texture'].value = TWO.ImageUtils.loadTexture('/images/world-dark.jpg');
+	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world-dark.jpg');
 
-	  var material = new TWO.ShaderMaterial({
+	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
 	    vertexShader: shader.vertexShader,
 	    fragmentShader: shader.fragmentShader
 	  });
 
-	  earthMesh = new TWO.Mesh(sphereGeometry, material);
+	  earthMesh = new THREE.Mesh(sphereGeometry, material);
 	  scene.add(earthMesh);
 
 	  // add an empty container for the beacons to be added to
-	  beaconHolder = new TWO.Object3D();
+	  beaconHolder = new THREE.Object3D();
 	  earthMesh.add(beaconHolder);
 	}
 
