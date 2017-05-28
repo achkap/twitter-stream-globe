@@ -4,7 +4,7 @@
 
 	// Constants
 	POS_X = 0,
-	POS_Y = 800,
+	POS_Y = 0,
 	POS_Z = 2000,
 	FOV = 45,
 	NEAR = 1,
@@ -95,6 +95,7 @@
 	/**
 	 * Converts a latlong to Vector3 for use in Three.js
 	 */
+	/*
 	function latLonToVector3 (lat, lon, height) {
 
 		height = height ? height : 0;
@@ -113,8 +114,29 @@
 	  vector3.z = Math.sin(phi) * Math.sin(theta) * rad;
 
 	  return vector3;
-	};
+	};*/
+	function latLonToVector3 (lat, lon, height) {
 
+		height = height ? height : 0;
+
+	  var vector3 = new THREE.Vector3(0, 0, 0);
+
+	  lon = lon + 10;
+	  lat = lat - 2;
+
+	  //var phi = PI_HALF - lat * Math.PI / 180 - Math.PI * 0.01;
+	  //var theta = 2 * Math.PI - lon * Math.PI / 180 + Math.PI * 0.06;
+	  //var rad = 600 + height;
+
+	  //vector3.x = Math.sin(phi) * Math.cos(theta) * rad;
+	  //vector3.y = Math.cos(phi) * rad;
+	  //vector3.z = Math.sin(phi) * Math.sin(theta) * rad;
+
+	  vector3.x = 1200*lon/180;
+	  vector3.y = 600*lat/180;
+		
+	  return vector3;
+	};
 	/**
 	 *	Adds a Tweet to the Earth, called from TweetHud.js
 	 */
