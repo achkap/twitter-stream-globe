@@ -110,7 +110,7 @@
 
 	  var vector3 = new THREE.Vector3(0, 0, 0);
 
-	  if (lat >= 26 && lat <= 49 && lon >= -124 && lon <= -70) {    // change coordinates to chenge tweet origin
+	  if (lat >= 26 && lat <= 49 && lon >= -124 && lon <= -70) {    // change coordinates to chαnge tweet origin
 	  lon = lon + 10;						// if the whole globe then delete if
 	  lat = lat - 2;
 	   
