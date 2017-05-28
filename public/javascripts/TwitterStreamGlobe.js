@@ -58,7 +58,17 @@
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world-dark.jpg');
+	  var currentDate = new Date();
+	  var currentTime = currentDate.getHours();
+	  if (currentTime>=7 && currentTime<19)
+	  {
+		  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/daytime.jpg');
+	  }
+	  else
+	  {
+		  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/nighttime.jpg');
+	  }
+	  //uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world-dark.jpg');
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
