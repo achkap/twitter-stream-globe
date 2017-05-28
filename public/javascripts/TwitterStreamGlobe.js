@@ -72,8 +72,8 @@
 	  scene.add(earthMesh);
 
 	  // add an empty container for the beacons to be added to
-	  beaconHolder = new THREE.Object3D();
-	  earthMesh.add(beaconHolder);
+	 // beaconHolder = new THREE.Object3D();
+	  //earthMesh.add(beaconHolder);
 	}
 
 	var stats;
@@ -188,7 +188,7 @@
 	 */ 
 	function render () {
 
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.05;
+		earthMesh.rotation.y = earthMesh.rotation.y + 0;
 		
 	  renderer.autoClear = false;
 	  renderer.clear();
