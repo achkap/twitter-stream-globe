@@ -5,7 +5,7 @@
 	// Constants
 	POS_X = 0,
 	POS_Y = 0,
-	POS_Z = 1500,
+	POS_Z = 1500,  //allagi wste na fainetai h eikona pio konta
 	FOV = 45,
 	NEAR = 1,
 	FAR = 150000,
@@ -54,8 +54,8 @@
 	function addEarth () {
 
 	  //var sphereGeometry = new THREE.SphereGeometry(600, 50, 50);
-	  var sphereGeometry = new THREE.BoxGeometry(1500, 800, 1);
-
+	  var sphereGeometry = new THREE.BoxGeometry(1500, 800, 1);  //box wste na ginei parallhlepipedo kai h mia diastasi na einai 1 este na einai (sxedon parallhlogrammo
+							
 
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
@@ -132,7 +132,7 @@
 	  //vector3.y = Math.cos(phi) * rad;
 	  //vector3.z = Math.sin(phi) * Math.sin(theta) * rad;
 
-	  vector3.x = 1200*lon/180;
+	  vector3.x = 1200*lon/180;			//allagh twn syntetagmenwn dioti afou den exoume sfaira de mas xreiazontai oloi autoi oi metasxhmatismoi
 	  vector3.y = 600*lat/180;
 	  vector3.z = 1;
 		
