@@ -71,9 +71,9 @@
 	  earthMesh = new THREE.Mesh(sphereGeometry, material);
 	  scene.add(earthMesh);
 
-	  // add an empty container for the beacons to be added to
-	 // beaconHolder = new THREE.Object3D();
-	  //earthMesh.add(beaconHolder);
+	 //add an empty container for the beacons to be added to
+	 beaconHolder = new THREE.Object3D();
+	 earthMesh.add(beaconHolder);
 	}
 
 	var stats;
