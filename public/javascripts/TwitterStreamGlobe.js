@@ -54,7 +54,7 @@
 	function addEarth () {
 
 	  //var sphereGeometry = new THREE.SphereGeometry(600, 50, 50);
-	  var sphereGeometry = new THREE.BoxGeometry(1200, 600, 1);
+	  var sphereGeometry = new THREE.BoxGeometry(1200, 600, 0);
 
 
 	  var shader = Shaders.earth;
@@ -134,7 +134,7 @@
 
 	  vector3.x = 1200*lon/180;
 	  vector3.y = 600*lat/180;
-	  vector3.z = 800;
+	  vector3.z = 400;
 		
 	  return vector3;
 	};
