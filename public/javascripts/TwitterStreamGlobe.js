@@ -134,7 +134,7 @@
 
 	  vector3.x = 1200*lon/180;
 	  vector3.y = 600*lat/180;
-	  vector3.z = 500;
+	  vector3.z = 800;
 		
 	  return vector3;
 	};
