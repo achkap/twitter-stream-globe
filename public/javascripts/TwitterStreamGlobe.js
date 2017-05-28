@@ -60,7 +60,7 @@
 
 	  var currentDate = new Date();
 	  var currentTime = currentDate.getHours();
-	  if (currentTime>=7 && currentTime<19)
+	  if ( !(currentTime>=7 && currentTime<19) )
 	  {
 		  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/daytime.jpg');
 	  }
