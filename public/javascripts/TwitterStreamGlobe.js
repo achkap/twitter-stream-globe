@@ -57,8 +57,19 @@
 
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world.jpg');   // change earth image
+	  
+	  var currentDate = new Date();
+	  var currentTime = currentDate.getHours();
+	  if (currentTime>=7 && currentTime<19)
+	  {
+	     uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world-day.jpg'); //change earth texture according to time
+	  }
+	  else
+	  {
+	     uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world.jpg');
+	  }
+	  		
+	  //uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world.jpg');   // change earth image
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
