@@ -5,7 +5,7 @@
 	// Constants
 	POS_X = 0,
 	POS_Y = 0,
-	POS_Z = 0,
+	POS_Z = 1000,
 	FOV = 45,
 	NEAR = 1,
 	FAR = 150000,
@@ -134,7 +134,7 @@
 
 	  vector3.x = 1200*lon/180;
 	  vector3.y = 600*lat/180;
-	  vector3.z = 400;
+	  vector3.z = 900;
 		
 	  return vector3;
 	};
